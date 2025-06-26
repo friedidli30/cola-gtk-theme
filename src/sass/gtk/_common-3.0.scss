@@ -1119,6 +1119,8 @@ searchbar > revealer > box {
   transition: background-color $duration $ease-out, color $duration $ease-out;
   background: linear-gradient(to bottom, #ecc7c4 0%,#c36761 50%,#b4463e 51%,#d68a84 100%);
   color: $titlebar-text;
+  @if $variant == 'light' { text-shadow: 3px 3px 6px #ccc; } 
+    @else { text-shadow: 3px 3px 6px #333; }
 
   @if $topbar == 'dark' and $variant == 'light' and $rimless == 'false' {
     border-radius: $window-radius - 1px $window-radius - 1px 0 0;
@@ -3588,14 +3590,8 @@ colorchooser .popover.osd {
 decoration {
   transition: none;
   box-shadow: $shadow-z16, 0 0 50px transparent;
-
-  @if $rimless == 'true' {
-    border-radius: $window-radius;
-  } @else {
-    border-radius: $window-radius + 2px;
-    border: 2px solid $primary;
-    background-clip: border-box;
-  }
+  border-radius: $window-radius;
+  
 
   // FIXME rationalize shadows
 
@@ -3609,11 +3605,6 @@ decoration {
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
     box-shadow: $shadow-z4, 0 0 50px transparent;
-
-    @if $rimless == 'false' {
-      border: 2px solid $primary;
-      background-clip: border-box;
-    }
   }
 
   .maximized &,
@@ -3629,26 +3620,13 @@ decoration {
   // server-side decorations as used by mutter
   .ssd & {
     margin: 0;
-
-    @if $rimless == 'true' {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-    } @else {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 0 0 2px $primary;
-      border: none;
-      border-radius: $window-radius $window-radius 0 0;
-    }
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+    
   } // just doing borders, wm draws actual shadows
 
   .csd.popup & {
     border-radius: $menu-radius;
-
-    @if $rimless == 'true' {
-      box-shadow: $shadow-z4;
-    } @else {
-      border-radius: $menu-radius + 2px;
-      border: 2px solid $primary;
-      background-clip: border-box;
-    }
+    box-shadow: $shadow-z4;
   }
 
   tooltip.csd & {
@@ -3667,12 +3645,7 @@ decoration {
     border-radius: 0;
     box-shadow: none;
     background: linear-gradient(to bottom, #ecc7c4 0%,#c36761 50%,#b4463e 51%,#d68a84 100%);
-
-    @if $rimless == 'true' {
-      border: 1px solid $solid-border;
-    } @else {
-      border: 2px solid $primary;
-    }
+    border: 1px solid $solid-border;
 
     &:backdrop { background: linear-gradient(to bottom, #a2a2a2 0%,#6e6e6e 50%,#5b5b5b 51%,#828282 100%); }
   }

@@ -21,7 +21,7 @@ $root-font-size: if($compact == 'false', 14px, 13px);
 //
 
 $modal-radius: 6px;
-$corner-radius: 6px;
+$corner-radius: 12px;
 $menu-radius: $corner-radius + $space-size;
 $window-radius: $corner-radius + $space-size;
 $circular-radius: 9999px;

@@ -1458,6 +1458,8 @@ headerbar {
   transition: all $duration $ease-out;
   background: linear-gradient(to bottom, #ecc7c4 0%,#c36761 50%,#b4463e 51%,#d68a84 100%);
   color: $titlebar-text;
+  @if $variant == 'light' { text-shadow: 3px 3px 6px #ccc; } 
+    @else { text-shadow: 3px 3px 6px #333; }
 
   @if $rimless == 'true' {
     box-shadow: inset 0 1px highlight($titlebar);
@@ -4188,15 +4190,9 @@ paned {
   }
 
   headerbar {
-    @if $rimless == 'true' {
       background-color: transparent;
       border: none;
       border-top-right-radius: 0;
-    } @else {
-      background-color: transparent;
-      box-shadow: none;
-      border: none;
-    }
   }
 
   @if $variant == 'light' and $topbar == 'dark' and $sidebar == 'normal' {
@@ -4399,15 +4395,9 @@ paned {
   }
 
   headerbar {
-    @if $rimless == 'true' {
       background-color: transparent;
       border: none;
       border-top-left-radius: 0;
-    } @else {
-      background-color: transparent;
-      box-shadow: none;
-      border: none;
-    }
   }
 }
 
