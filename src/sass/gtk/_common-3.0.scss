@@ -3870,3 +3870,9 @@ popover.emoji-completion {
     background-color: $overlay-hover;
   }
 }
+
+viewport {
+  @if $variant == 'light' {
+    background: linear-gradient(135deg, #ffffff 0%,#e5e5e5 100%);}
+        @else { background: inherit; }
+}

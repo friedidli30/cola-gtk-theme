@@ -5223,3 +5223,9 @@ emoji-completion-row {
 popover.entry-completion > contents {
   padding: 0;
 }
+
+viewport {
+  @if $variant == 'light' {
+    background: linear-gradient(135deg, #ffffff 0%,#e5e5e5 100%); }
+        @else { background: inherit; }
+}
