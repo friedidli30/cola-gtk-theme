@@ -1117,7 +1117,7 @@ searchbar > revealer > box {
 
 .titlebar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
-  background-color: $titlebar;
+  background: linear-gradient(to bottom, #ecc7c4 0%,#c36761 50%,#b4463e 51%,#d68a84 100%);
   color: $titlebar-text;
 
   @if $topbar == 'dark' and $variant == 'light' and $rimless == 'false' {
@@ -1133,7 +1133,7 @@ searchbar > revealer > box {
   &:disabled { color: $titlebar-text-disabled; }
 
   &:backdrop {
-    background-color: $titlebar-backdrop;
+    background: linear-gradient(to bottom, #a2a2a2 0%,#6e6e6e 50%,#5b5b5b 51%,#828282 100%);
     color: $titlebar-text-secondary;
 
     &:disabled { color: $titlebar-text-secondary-disabled; }
@@ -1285,7 +1285,7 @@ searchbar > revealer > box {
   }
 
   &.default-decoration {
-    min-height: $small-size;
+    min-height: $hbar-size;
     padding: $space-size;
 
     @if $rimless == 'true' {
@@ -1327,7 +1327,7 @@ searchbar > revealer > box {
 
 headerbar {
   // The sizing factor needs to be defined in the headerbar node for the case of split headerbars
-  min-height: $large-size;
+  min-height: $hbar-size;
   padding: 0 $space-size;
 
   &:not(.titlebar) { box-shadow: none; }
@@ -3666,7 +3666,7 @@ decoration {
     padding: 2px;
     border-radius: 0;
     box-shadow: none;
-    background-color: $titlebar;
+    background: linear-gradient(to bottom, #ecc7c4 0%,#c36761 50%,#b4463e 51%,#d68a84 100%);
 
     @if $rimless == 'true' {
       border: 1px solid $solid-border;
@@ -3674,7 +3674,7 @@ decoration {
       border: 2px solid $primary;
     }
 
-    &:backdrop { background-color: $titlebar-backdrop; }
+    &:backdrop { background: linear-gradient(to bottom, #a2a2a2 0%,#6e6e6e 50%,#5b5b5b 51%,#828282 100%); }
   }
 }
 

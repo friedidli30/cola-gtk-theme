@@ -1451,12 +1451,12 @@ searchbar > revealer > box {
 }
 
 headerbar {
-  min-height: $large-size;
+  min-height: $hbar-size;
   padding: 0;
   margin: 0;
   border: none;
   transition: all $duration $ease-out;
-  background-color: $titlebar;
+  background: linear-gradient(to bottom, #ecc7c4 0%,#c36761 50%,#b4463e 51%,#d68a84 100%);
   color: $titlebar-text;
 
   @if $rimless == 'true' {
@@ -1467,7 +1467,7 @@ headerbar {
   &:disabled { color: $titlebar-text-disabled; }
 
   &:backdrop {
-    background-color: $titlebar-backdrop;
+    background: linear-gradient(to bottom, #a2a2a2 0%,#6e6e6e 50%,#5b5b5b 51%,#828282 100%);
     color: $titlebar-text-secondary;
 
     &:disabled { color: $titlebar-text-secondary-disabled; }
@@ -1640,7 +1640,7 @@ headerbar {
   }
 
   &.default-decoration {
-    min-height: $medium-size;
+    min-height: $hbar-size;
     background-color: $titlebar;
     background-image: image($titlebar);
     color: $titlebar-text;
