@@ -5226,6 +5226,18 @@ popover.entry-completion > contents {
 
 viewport {
   @if $variant == 'light' {
-    background: linear-gradient(135deg, #ffffff 0%,#e5e5e5 100%); }
+    background: linear-gradient(135deg, #eceff0 0%,#dee2e4 35%,#d0d5d8 69%,#ebedef 100%); }
+        @else { background: inherit; }
+}
+
+viewport iconview {
+  @if $variant == 'light' {
+    background: linear-gradient(to bottom, #eceff0 0%,#dee2e4 50%,#d0d5d8 51%,#ebedef 100%); }
+        @else { background: inherit; }
+}
+
+toolbar {
+  @if $variant == 'light' {
+    background: linear-gradient(135deg, #eceff0 0%,#dee2e4 35%,#d0d5d8 69%,#ebedef 100%); }
         @else { background: inherit; }
 }
