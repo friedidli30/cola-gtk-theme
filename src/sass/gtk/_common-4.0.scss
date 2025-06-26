@@ -1456,7 +1456,7 @@ headerbar {
   margin: 0;
   border: none;
   transition: all $duration $ease-out;
-  background: linear-gradient(to bottom, #ecc7c4 0%,#c36761 50%,#b4463e 51%,#d68a84 100%);
+  background: linear-gradient(to bottom, #fcc7c0 0%,#f36756 50%,#d4463a 51%,#f68a75 100%);
   color: $titlebar-text;
   @if $variant == 'light' { text-shadow: 3px 3px 6px #ccc; } 
     @else { text-shadow: 3px 3px 6px #333; }
