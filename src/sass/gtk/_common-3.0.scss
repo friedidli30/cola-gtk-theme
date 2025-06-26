@@ -1117,7 +1117,7 @@ searchbar > revealer > box {
 
 .titlebar {
   transition: background-color $duration $ease-out, color $duration $ease-out;
-  background: linear-gradient(to bottom, #efc5ca 0%,#d24b5a 50%,#ba2737 51%,#f18e99 100%); 
+  background: linear-gradient(to bottom, #edc6c3 0%,#c6655e 50%,#b8433a 51%,#d88882 100%);
   color: $titlebar-text;
   @if $variant == 'light' { text-shadow: 3px 3px 6px #ccc; } 
     @else { text-shadow: 3px 3px 6px #333; }
@@ -3644,7 +3644,7 @@ decoration {
     padding: 2px;
     border-radius: 0;
     box-shadow: none;
-    background: linear-gradient(to bottom, #efc5ca 0%,#d24b5a 50%,#ba2737 51%,#f18e99 100%); 
+    background: linear-gradient(to bottom, #edc6c3 0%,#c6655e 50%,#b8433a 51%,#d88882 100%);
     border: 1px solid $solid-border;
 
     &:backdrop { background: linear-gradient(to bottom, #a2a2a2 0%,#6e6e6e 50%,#5b5b5b 51%,#828282 100%); }
