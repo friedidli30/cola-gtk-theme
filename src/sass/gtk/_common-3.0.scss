@@ -1119,8 +1119,8 @@ searchbar > revealer > box {
   transition: background-color $duration $ease-out, color $duration $ease-out;
   background: linear-gradient(to bottom, #edc6c3 0%,#c6655e 50%,#b8433a 51%,#d88882 100%);
   color: $titlebar-text;
-  @if $variant == 'light' { text-shadow: 3px 3px 6px #ccc; } 
-    @else { text-shadow: 3px 3px 6px #333; }
+  @if $variant == 'light' { text-shadow: 0px 0px 10px #ccc; } 
+    @else { text-shadow: 0px 0px 10px #555; }
 
   @if $topbar == 'dark' and $variant == 'light' and $rimless == 'false' {
     border-radius: $window-radius - 1px $window-radius - 1px 0 0;
